@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/','AjaxController@index')->name('home');
+// Route::get('/table','AjaxController@form')->name('form1');
+Route::post('/create','AjaxController@store')->name('crud');
